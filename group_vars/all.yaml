@@ -1,11 +1,12 @@
 ansible_user: ec2-user
 ansible_password: DevOps321
-MONGODB_HOST: mongodb-"{{env}}".devopsskillup.online
-CATALOGUE_HOST: catalogue-"{{env}}".devopsskillup.online
-REDIS_HOST: redis-"{{env}}".devopsskillup.online
-USER_HOST: user-"{{env}}".devopsskillup.online
-CART_HOST: cart-"{{env}}".devopsskillup.online
-MYSQL_HOST: mysql-"{{env}}".devopsskillup.online
-SHIPPING_HOST: shipping-"{{env}}".devopsskillup.online
-RABBITMQ_HOST: rabbitmq-"{{env}}".devopsskillup.online
-PAYMENT_HOST: payment-"{{env}}".devopsskillup.online
+MONGODB_HOST: mongodb-{{ env }}.devopsskillup.online
+REDIS_HOST: redis-{{ env }}.devopsskillup.online
+MYSQL_HOST: mysql-{{ env }}.devopsskillup.online
+RABBITMQ_HOST: rabbitmq-{{ env }}.devopsskillup.online
+CATALOGUE_HOST: catalogue.backend-alb-{{ env }}.devopsskillup.online
+USER_HOST: user.backend-alb-{{ env }}.devopsskillup.online
+CART_HOST: cart.backend-alb-{{ env }}.devopsskillup.online
+SHIPPING_HOST: shipping.backend-alb-{{ env }}.devopsskillup.online
+PAYMENT_HOST: payment.backend-alb-{{ env }}.devopsskillup.online
+app_version: v3
